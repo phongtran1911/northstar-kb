@@ -1,0 +1,51 @@
+name: daily-sync
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: daily-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: data/vectors
+          key: vectors-${{ github.run_id }}
+          restore-keys: vectors-
+
+      - name: Build image
+        run: docker build -t kb-sync .
+
+      - name: Run once
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          VECTOR_STORE_ID: ${{ secrets.VECTOR_STORE_ID }}
+        run: |
+          set -o pipefail
+          mkdir -p data/vectors
+          docker run --rm \
+            -e API_KEY \
+            -e VECTOR_STORE_ID \
+            -e DATA_DIR=/app/data/articles \
+            -e VECTOR_STORE_PATH=/app/data/vectors \
+            -v "$PWD/data/vectors:/app/data/vectors" \
+            kb-sync | tee data/vectors/last-run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: last-run
+          path: data/vectors/last-run.log
+          if-no-files-found: warn
+          retention-days: 30

@@ -1,0 +1,205 @@
+{
+  "vector_store_id": "vs_6ab75943ade88191862c92a92adc81dc",
+  "files": {
+    "accepted-payment-methods.md": {
+      "sha256": "a9017337cd9c3b48a66b27600297951de37970726b2c02415d40dedb7b8c869d",
+      "file_id": "file-WuJKjoAWvHZR4XFTEFu3Cc"
+    },
+    "broadcast-send-scheduled-snapshots-of-your-dashboards.md": {
+      "sha256": "b32450535f2e695587830f8e2b2640179c069525da55a78662f850f842670372",
+      "file_id": "file-KNTuRC9SRKVmRA9SxQcns2"
+    },
+    "chromeos-pwa-instructions.md": {
+      "sha256": "1ec09a89e99a4dac109708998a46cd292465bec9da0ef82a28f3f1c6daab3991",
+      "file_id": "file-TjSF8J2qzeUcjim89bhw1q"
+    },
+    "connect-cisco-webex-rooms-to-optisigns-digital-signage.md": {
+      "sha256": "bc2ae68d3390cf7c33673b980f662b000a33d750acd35302015bfb140d297dec",
+      "file_id": "file-QXSrckBz62mWdPRomY1UQL"
+    },
+    "connect-google-meet-hardware-to-optisigns-digital-signage.md": {
+      "sha256": "f805e6b74f6ffa2491dc4485f7ac551441b86b1012a8a25258422808a08dcb48",
+      "file_id": "file-CXYCaJyf29zNoVjA457scZ"
+    },
+    "connect-microsoft-teams-rooms-to-optisigns-digital-signage.md": {
+      "sha256": "ca8e71958bc060661a32f5359a2c69042e5a7528956e8b5d4d61bef2231c0715",
+      "file_id": "file-HP33fTwVRSo8JfMMaVSpLy"
+    },
+    "connect-sharepoint-news-to-optisigns-digital-signage.md": {
+      "sha256": "357a6006ce1744d8262a048cb17d93f33574b8b90c8adaac580ea297df5663de",
+      "file_id": "file-CTcmKrgMZdcDe1ATE7PyK8"
+    },
+    "connect-zoom-rooms-to-optisigns-digital-signage.md": {
+      "sha256": "51bbc59ac176a5d1f5c08168465a558771e231d888221c6695980e05b97d11a2",
+      "file_id": "file-YUortyADaoo9GKWaiEhhJi"
+    },
+    "designer-2-0-new-features.md": {
+      "sha256": "f9c62b32c98e3cdabb85b87db7d128cab525022924da764f5780cbf52865c5a6",
+      "file_id": "file-VCHrnDVB5ZZjc6XG3RYMUi"
+    },
+    "device-management-and-mass-provisioning.md": {
+      "sha256": "a1db3c016954dd67fefba7f6657b466a2bee5cd00c2419f8d4a2559db8e5de25",
+      "file_id": "file-EHMeR2Ezkb9MsHkkRHa2eA"
+    },
+    "disk-encryption.md": {
+      "sha256": "bd3b1ee3ab32ff64d0cceaea77d5fd4dd573a7aa4a7cef467a8ef3e6ad0b9c33",
+      "file_id": "file-CT7jj1ycveGNwVnekZMxuT"
+    },
+    "display-salesforce-dashboards-with-mfa-using-web-scripting.md": {
+      "sha256": "90655816a93424e351abdc6bf9819fe647656f98738f43b58620493bff25577a",
+      "file_id": "file-7NromoDd8NZkfcbDHEoqKL"
+    },
+    "fixing-unexpected-screen-rotation-incorrect-orientation-with-optisigns-android-stick.md": {
+      "sha256": "72082327ac2a36a80deadf45c5ae1b5ff4338460a5bf00abc693546a9814ce99",
+      "file_id": "file-WebdAu4UxrxfgesxT4KGMN"
+    },
+    "getting-started-with-an-optisigns-free-trial.md": {
+      "sha256": "05e8eb084c0a21bbb3f33a832a73ea80bbf27f1d5125f0cb649a9903fdb9f44e",
+      "file_id": "file-XyUXVbVjR1VJTEfqRWfnuT"
+    },
+    "getting-started-with-designer.md": {
+      "sha256": "166d2ff9f465302ef5e7e1065bbf019145b72b8a51f3e3431dcbb56eee4608ea",
+      "file_id": "file-GKA7SeSaeaLEA5iwTaBg2t"
+    },
+    "handle-oauth-authentication-using-api-gateway-pre-request-configuration.md": {
+      "sha256": "f6897b26e37835477502d78e6834638f4394aded1fe17a59d3065022d4f95c20",
+      "file_id": "file-WsSfJJqzovRLSMqFPTkqUL"
+    },
+    "how-to-access-the-troubleshooting-page-of-the-optisigns-player.md": {
+      "sha256": "45cfa9316f762f004e8733165b1a985e25cfec7a856e37bffee114520f11705f",
+      "file_id": "file-Q2VLHBe13hkVwZBCK1XQdp"
+    },
+    "how-to-display-a-snowflake-dashboard-with-optisigns.md": {
+      "sha256": "0fb1bfa5eb283000cb77de2aa433aa492eea186edae5eed3414549c5d8d873a3",
+      "file_id": "file-MWFUW929WyJG1sZDsKf9er"
+    },
+    "how-to-display-databricks-dashboards-on-optisigns.md": {
+      "sha256": "61c207cfe7c2cbb46a6d9dd4ceb08f46f29902109197067d896d5a04072e21a6",
+      "file_id": "file-D41nM2Rgfngh5jANEFbsCN"
+    },
+    "how-to-display-grafana-dashboards-on-optisigns.md": {
+      "sha256": "b8940534da11a0781a9be3fdfee9e2d047ddfd0565655b32a7c2fd8b2d3a2b7f",
+      "file_id": "file-9H1ZR53CSWYY1E95DjXHW1"
+    },
+    "how-to-get-a-microsoft-teams-webhook-url-for-optisigns-broadcast.md": {
+      "sha256": "d98d9e5f9a20c2f1df4e0264e0ec00a02191766f7e7319701671ffe477b43e22",
+      "file_id": "file-MW6xEbcSm1fPNfDNh37hXw"
+    },
+    "how-to-install-a-root-certificate-and-display-an-internal-website-on-screens.md": {
+      "sha256": "8b670dd3f2acb42e479930f49a188495f4eb1b8e68a340023787f4d2e41ff426",
+      "file_id": "file-J6waPAba7uD3HZ5nV7dsn2"
+    },
+    "how-to-order-a-preconfigured-optisigns-android-stick.md": {
+      "sha256": "af9be26d6b9998654babc051c7d6413c4b67b181e692c5e821e2f92edf222265",
+      "file_id": "file-HRWdHx85E17VtrgmqwVNTV"
+    },
+    "how-to-play-licensed-background-music-on-digital-signs-with-optisound.md": {
+      "sha256": "971b8cf0bec8969d139f13e4a1ae5c01ab089ecb93e798b9c9428699e8af08bd",
+      "file_id": "file-68brM7DakYU5QSe3AZViSY"
+    },
+    "how-to-set-up-a-power-bi-service-principal-for-use-in-optisigns.md": {
+      "sha256": "616e5d8cdae835520d77faa0ef9a608e07c40326f65126a6b810506d99f08e2b",
+      "file_id": "file-YVVLsVSoX6EX6A8wWorbDm"
+    },
+    "how-to-set-up-an-outlook-calendar-app-with-shared-permissions.md": {
+      "sha256": "f8fd62689c78bd13125a64ad32b5263b42e0ef11b838364021d915235863d712",
+      "file_id": "file-U49rxw229XBzKmUpnAou9L"
+    },
+    "how-to-use-optisigns-with-microsoft-teams-rooms.md": {
+      "sha256": "e0c55676a81c8a06ab973d11b2006bee7eca979523e8f3cae28b44c4073bb8c6",
+      "file_id": "file-Vxw1nUeeWqiEQgqDYrn2v4"
+    },
+    "how-to-use-the-google-ads-dashboard-app.md": {
+      "sha256": "d8f82469263c8952d27f944c220cbbdee632a87b10867dc2c71fce36648545a6",
+      "file_id": "file-Lan8zSBPQo74P1xGkXtgGb"
+    },
+    "how-to-use-the-google-search-console-app.md": {
+      "sha256": "9039af5d135578964001844ca501ca828ad8c46e7319d60619647443cf74c19a",
+      "file_id": "file-T4Ero69tM2YvbPMSDKG87T"
+    },
+    "how-to-use-the-tableau-app.md": {
+      "sha256": "2af17c3071eb8865898e42196ab8ed72d3fea5fe05730e531d81608c7a00b7b3",
+      "file_id": "file-2Z3fRphTMPYXmtbsPi8jSB"
+    },
+    "how-to-use-the-youtube-dashboard-app.md": {
+      "sha256": "dae3e0096490b1a43af37ec31d00d28a951421c581ff30e6bf86b10229ba31fa",
+      "file_id": "file-Adkba3PeF9SGRW7CdNKsmh"
+    },
+    "how-to-using-sepa-and-ideal-for-eur-currency-subscription-payments.md": {
+      "sha256": "2a56d06feb686cd0033fc93727de838ebd88e5012247855adc3cc7120e869770",
+      "file_id": "file-DoyDF3ccatzf5UD3Mbtai3"
+    },
+    "inbound-webhook-datasources-in-designer.md": {
+      "sha256": "dc8b3d752894701580b84f96111d6cad4d8426d1d14a6dfba31ebd1a31361b3c",
+      "file_id": "file-Ly7592jNbTqk8uSVJVyfiS"
+    },
+    "making-a-video-wall-with-optisigns-video-wall-app.md": {
+      "sha256": "91f64d90ba3f4003301e5b76f7feb1a95ac4d5f9457ad87cb4596e703fe0f85c",
+      "file_id": "file-R1btc1qgtPuWTvi2XmDS1i"
+    },
+    "operational-schedule-troubleshooting.md": {
+      "sha256": "5ab38a6073d0cade56fc63b19bce442ffb932c59c07120dbec16a1ab4eb78573",
+      "file_id": "file-8WiymtkAStjduWcHyGnv24"
+    },
+    "optidev-add-on-free-trial-and-pricing.md": {
+      "sha256": "4a995594b0d6c07187949ac462f07a85e6bb4f28eb5c9886273b100ac9ad1fd3",
+      "file_id": "file-N4v6HWRgMygTCPCknLCTGe"
+    },
+    "optisigns-digital-signage-app-for-zoom-adding-using-and-removing-the-app.md": {
+      "sha256": "d774ead694aaae61eb20b9ebb75153f7d51b94016dc5faa51360b51701246369",
+      "file_id": "file-B2o9u3YD1nAqKBb5szEwGV"
+    },
+    "optisigns-pro-promax-player-troubleshooting-guide.md": {
+      "sha256": "83f9e338ff6e160d6ada7e7b7b4f791b022a81ff63a1c3f0a65a43b79b216c8a",
+      "file_id": "file-RczUw44ndZQBefTfN5PfsR"
+    },
+    "optistick-troubleshooting-guide.md": {
+      "sha256": "9b8bc7bc3968d015f99293e93a9fada82bdc69873a8dbe41742f13991a618f10",
+      "file_id": "file-NYs6hYV3pncgNaM4wvR7Ni"
+    },
+    "refer-earn-optisigns-referral-program.md": {
+      "sha256": "ed108f3965996b0622f8db5032332149f8b8725f70f370d8120b861a2e2450f3",
+      "file_id": "file-BABUoxAb3CDRLTAAhiDwAH"
+    },
+    "room-integrations-turn-your-meeting-rooms-into-digital-signage.md": {
+      "sha256": "ac4321d455740ae78d673f44ea724524cd380cb13d21a265c2eb09dbc933afb5",
+      "file_id": "file-VTUrqc6tzM1BTsmjd9ZcrF"
+    },
+    "tagging-in-optisigns.md": {
+      "sha256": "eee7ba9bf6e14c547654cfb26fb50f4cafea4bf77f106cb9ee04e8de516ad01a",
+      "file_id": "file-QxJLFCFr8DcV7RugWCeFHn"
+    },
+    "user-management-example-chain-restaurant-or-retail-store-with-multiple-locations.md": {
+      "sha256": "a9395c86c50ad60c32e11e255b1ab757f905e6f68260c20b287cd65038aaa27b",
+      "file_id": "file-14hsFVp24bRvaRRbgpmdwQ"
+    },
+    "using-an-enterprise-network-802-1x-with-optisigns.md": {
+      "sha256": "419e9406b4261c16486b1a2c2db1624b27863499d9a66ba8f44016ee376a6082",
+      "file_id": "file-EdZcM1J9fJ6zxErJHcNzR4"
+    },
+    "using-the-flight-schedule-app.md": {
+      "sha256": "781db2bc5eab93eee868f3dff2223817fcd88e7ab5e4521806228abb089f5c43",
+      "file_id": "file-KnSBc1pPsvLMr7ScDbM3ZF"
+    },
+    "using-the-japan-earthquake-app.md": {
+      "sha256": "e8f433214f799174abdb1a5f3acc42529bd9e3a8c64fb8fb858ac6071a324bc8",
+      "file_id": "file-N18fdb73cuXuLePWjnhAAT"
+    },
+    "using-the-japan-transit-app.md": {
+      "sha256": "2c604fc45d1d0f03e2172e9b2386dd741e73271ac4436a6f8ff6fd3106dc0914",
+      "file_id": "file-QYcuKgLaef6KfG1aKcT922"
+    },
+    "using-the-x-social-app-add-on.md": {
+      "sha256": "2d55b7fb44c598bfce9c8cfe59fbb67901371e29cc4697a8909bb44c743e1720",
+      "file_id": "file-AzB2voagxST2b2XSS8L8L4"
+    },
+    "what-access-does-optisigns-have-to-my-account-and-devices.md": {
+      "sha256": "fd01b15067719b74123c8edf1656c48000f569b56cbc77f2dd987fc8a6ecc726",
+      "file_id": "file-5qd6GhqrjYVF6DGJ2ghmG7"
+    },
+    "what-do-i-get-with-an-optisigns-free-plan.md": {
+      "sha256": "bfbc04c9ef09f0ffcfa836832d3f366af0493f23725faf6d6b9435e78328451c",
+      "file_id": "file-NDDkitYUAJAHdJyVhMcy6E"
+    }
+  }
+}

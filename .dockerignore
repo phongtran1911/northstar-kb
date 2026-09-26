@@ -1,0 +1,11 @@
+.git
+.github
+.venv
+venv
+.env
+.env.*
+!.env.sample
+**/__pycache__
+**/*.pyc
+data/vectors
+.DS_Store

@@ -147,6 +147,10 @@ activemq-data/
 # SageMath parsed files
 *.sage.py
 
+# Local knowledge base artifacts. manifest.json is the delta index.
+data/vectors/*
+!data/vectors/manifest.json
+
 # Environments
 .env
 .envrc
