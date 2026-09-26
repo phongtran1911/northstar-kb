@@ -38,4 +38,6 @@ Logs and the `last-run` artifact: https://github.com/phongtran1911/northstar-kb/
 
 ## Assistant
 
-In the [Playground](https://platform.openai.com/playground?mode=chat), paste the assignment instructions, turn on File search, and select vector store `northstar-kb`. Ask: “How do I add a YouTube video?” Save that screenshot as `docs/assistant-youtube.png`.
+In the [Playground](https://platform.openai.com/playground?mode=chat), paste the assignment instructions, turn on File search, and select vector store `northstar-kb`. Ask: “How do I add a YouTube video?”
+
+![Assistant answer with a cited article URL](docs/assistant-youtube.jpg)
