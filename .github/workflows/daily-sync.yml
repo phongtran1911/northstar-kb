@@ -40,12 +40,12 @@ jobs:
             -e DATA_DIR=/app/data/articles \
             -e VECTOR_STORE_PATH=/app/data/vectors \
             -v "$PWD/data/vectors:/app/data/vectors" \
-            kb-sync | tee data/vectors/last-run.log
+            kb-sync | tee last-run.log
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: last-run
-          path: data/vectors/last-run.log
+          path: last-run.log
           if-no-files-found: warn
           retention-days: 30

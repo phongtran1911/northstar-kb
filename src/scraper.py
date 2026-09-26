@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from typing import Any
 
 import requests
 
@@ -41,8 +42,12 @@ class Scraper:
             response = requests.get(url, params=params, timeout=30)
             response.raise_for_status()
             payload = response.json()
+            if not isinstance(payload, dict) or not isinstance(payload.get("articles"), list):
+                raise RuntimeError(f"Zendesk response did not include articles: {url}")
 
-            for raw in payload.get("articles", []):
+            for raw in payload["articles"]:
+                if not isinstance(raw, dict):
+                    raise RuntimeError(f"Zendesk response did not include articles: {url}")
                 if raw.get("draft"):
                     continue
                 articles.append(_to_article(raw))
@@ -55,11 +60,10 @@ class Scraper:
         return articles
 
 
-def _to_article(raw: dict) -> Article:
+def _to_article(raw: dict[str, Any]) -> Article:
     return Article(
         id=int(raw["id"]),
         title=raw.get("title") or "",
         html=raw.get("body") or "",
         url=raw.get("html_url") or "",
-        updated_at=raw.get("updated_at") or "",
     )

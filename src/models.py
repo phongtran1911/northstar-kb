@@ -9,5 +9,4 @@ class Article:
     title: str
     html: str
     url: str
-    updated_at: str
     markdown: str = ""

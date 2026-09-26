@@ -4,10 +4,9 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from typing import Any
 
 from openai import APIError, OpenAI
-
-from src.models import Article
 
 CHUNKING_STRATEGY = {
     "type": "static",
@@ -26,8 +25,8 @@ class VectorStore:
         self.articles_dir = Path(os.getenv("DATA_DIR", "data/articles"))
         self.manifest_path = self.path / "manifest.json"
 
-    def upsert(self, articles: list[Article]) -> int:
-        del articles  # Files on disk are the source uploaded to OpenAI.
+    def upsert(self) -> None:
+        """Upload Markdown files whose content hash is not in the manifest."""
         client = OpenAI(api_key=_api_key())
         manifest = self._load_manifest()
         store_id = self._ensure_store(client, manifest)
@@ -60,11 +59,11 @@ class VectorStore:
             self._save_manifest(manifest)
 
         chunk_count = _count_chunks(client, store_id, embedded_ids)
+        chunks = chunk_count if chunk_count is not None else "unavailable"
         print(f"added={added} updated={updated} skipped={skipped}")
-        print(f"embedded files={added + updated} chunks={chunk_count}")
-        return added + updated
+        print(f"embedded files={added + updated} chunks={chunks}")
 
-    def _ensure_store(self, client: OpenAI, manifest: dict) -> str:
+    def _ensure_store(self, client: OpenAI, manifest: dict[str, Any]) -> str:
         store_id = os.getenv("VECTOR_STORE_ID") or manifest.get("vector_store_id")
         if store_id:
             manifest["vector_store_id"] = store_id
@@ -76,14 +75,16 @@ class VectorStore:
         self._save_manifest(manifest)
         return store.id
 
-    def _load_manifest(self) -> dict:
+    def _load_manifest(self) -> dict[str, Any]:
         if not self.manifest_path.exists():
             return {"vector_store_id": "", "files": {}}
         data = json.loads(self.manifest_path.read_text(encoding="utf-8"))
+        if not isinstance(data, dict) or not isinstance(data.get("files", {}), dict):
+            raise RuntimeError(f"Invalid manifest: {self.manifest_path}")
         data.setdefault("files", {})
         return data
 
-    def _save_manifest(self, manifest: dict) -> None:
+    def _save_manifest(self, manifest: dict[str, Any]) -> None:
         self.path.mkdir(parents=True, exist_ok=True)
         self.manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
@@ -122,21 +123,29 @@ def _attach(client: OpenAI, store_id: str, file_ids: list[str]) -> None:
     raise RuntimeError(f"Vector store indexing failed: {detail}")
 
 
-def _count_chunks(client: OpenAI, store_id: str, file_ids: list[str]) -> int:
+def _count_chunks(client: OpenAI, store_id: str, file_ids: list[str]) -> int | None:
+    """Return the chunk total. Counting is diagnostic and must not fail the sync."""
     total = 0
-    for file_id in file_ids:
-        page = client.vector_stores.files.content(file_id, vector_store_id=store_id)
-        for chunk_page in page.iter_pages():
-            total += len(chunk_page.data)
+    try:
+        for file_id in file_ids:
+            page = client.vector_stores.files.content(file_id, vector_store_id=store_id)
+            for chunk_page in page.iter_pages():
+                total += len(chunk_page.data)
+    except APIError as exc:
+        print(f"chunk count failed status={exc.status_code}")
+        return None
     return total
 
 
 def _delete_remote(client: OpenAI, store_id: str, file_id: str) -> None:
+    """Remove a previous upload. A missing file is already gone."""
     try:
         client.vector_stores.files.delete(file_id, vector_store_id=store_id)
-    except APIError:
-        pass
+    except APIError as exc:
+        if exc.status_code != 404:
+            raise
     try:
         client.files.delete(file_id)
-    except APIError:
-        pass
+    except APIError as exc:
+        if exc.status_code != 404:
+            raise
